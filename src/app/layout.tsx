@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: "Formulários de qualificação de leads da Qarvon.",
 };
 
-const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID?.trim() || "968866562660960";
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
