@@ -33,15 +33,15 @@ export const trafegoForm: FormConfig = {
       maxLength: 80,
     },
     {
-      id: "instagram",
-      type: "instagram",
-      question: "Qual é o Instagram da sua empresa?",
-    },
-    {
       id: "whatsapp",
       type: "phone",
       question: "Qual é o seu WhatsApp?",
       defaultCountry: "BR",
+    },
+    {
+      id: "instagram",
+      type: "instagram",
+      question: "Qual é o Instagram da sua empresa?",
     },
     {
       id: "monthly_revenue",
