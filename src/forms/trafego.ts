@@ -63,7 +63,7 @@ export const trafegoForm: FormConfig = {
       type: "choice",
       question: `Para gerar volume suficiente de oportunidades, recomendamos um investimento mínimo de R$ 100 por dia em anúncios (aproximadamente R$ 3.000 por mês).
 
-      Esse valor é destinado exclusivamente às plataformas de anúncios e não inclui os honorários da Qarvon.
+      Esse valor é destinado exclusivamente às plataformas de anúncios e não inclui os honorários da Qarvon.\n\n
 
       Esse investimento faz sentido para a sua empresa?`,
       options: [
