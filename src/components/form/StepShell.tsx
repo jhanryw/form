@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
 
-
 interface StepShellProps {
   onBack: () => void;
   question: string;
@@ -9,7 +8,12 @@ interface StepShellProps {
   children: ReactNode;
 }
 
-export function StepShell({ onBack, question, helperText, children }: StepShellProps) {
+export function StepShell({
+  onBack,
+  question,
+  helperText,
+  children,
+}: StepShellProps) {
   return (
     <div className="animate-fade-in-up mx-auto flex min-h-screen w-full max-w-xl flex-col justify-center gap-8 px-6 py-16 sm:px-10">
       <button
@@ -22,13 +26,26 @@ export function StepShell({ onBack, question, helperText, children }: StepShellP
 
       <div className="flex flex-col gap-6">
         {helperText && (
-          <p className="text-sm leading-relaxed text-neutral-600">{helperText}</p>
+          <p className="text-sm leading-relaxed text-neutral-600">
+            {helperText}
+          </p>
         )}
-        <ReactMarkdown
-  className="text-xl leading-snug font-bold text-neutral-900 sm:text-2xl"
->
-  {question}
-</ReactMarkdown>
+
+        <div className="text-xl font-bold leading-snug text-neutral-900 sm:text-2xl">
+          <ReactMarkdown
+            components={{
+              p: ({ children }) => (
+                <p className="mb-5 last:mb-0">{children}</p>
+              ),
+              strong: ({ children }) => (
+                <strong className="font-extrabold">{children}</strong>
+              ),
+            }}
+          >
+            {question}
+          </ReactMarkdown>
+        </div>
+
         {children}
       </div>
     </div>
