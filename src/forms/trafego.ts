@@ -48,25 +48,28 @@ export const trafegoForm: FormConfig = {
       type: "choice",
       question: "Qual é o faturamento mensal da sua empresa?",
       options: [
-        { label: "Até R$ 15 mil", value: "up_to_15k", disqualifies: true, disqualificationReason: "revenue_below_30000" },
-        { label: "De R$ 15 mil a R$ 30 mil", value: "15k_to_30k", disqualifies: true, disqualificationReason: "revenue_below_30000" },
-        { label: "De R$ 30 mil a R$ 50 mil", value: "30k_to_50k" },
-        { label: "De R$ 50 mil a R$ 100 mil", value: "50k_to_100k" },
-        { label: "De R$ 100 mil a R$ 300 mil", value: "100k_to_300k" },
-        { label: "De R$ 300 mil a R$ 500 mil", value: "300k_to_500k" },
         { label: "Acima de R$ 500 mil", value: "above_500k" },
+        { label: "De R$ 300 mil a R$ 500 mil", value: "300k_to_500k" },
+        { label: "De R$ 100 mil a R$ 300 mil", value: "100k_to_300k" },
+        { label: "De R$ 50 mil a R$ 100 mil", value: "50k_to_100k" },
+        { label: "De R$ 30 mil a R$ 50 mil", value: "30k_to_50k" },
+        { label: "De R$ 15 mil a R$ 30 mil", value: "15k_to_30k", disqualifies: true, disqualificationReason: "revenue_below_30000" },
+        { label: "Até R$ 15 mil", value: "up_to_15k", disqualifies: true, disqualificationReason: "revenue_below_30000" }
+        ,
       ],
     },
     {
       id: "accepted_media_investment",
       type: "choice",
-      question: "Você está de acordo com esse investimento?",
-      helperText:
-        "Para executar uma estratégia com volume suficiente de dados, recomendamos um investimento mínimo de R$ 100 por dia em anúncios, aproximadamente R$ 3.000 por mês. Esse valor é destinado diretamente às plataformas de anúncios e não inclui a prestação de serviço da Qarvon.",
+      question: `Para gerar volume suficiente de oportunidades, recomendamos um investimento mínimo de R$ 100 por dia em anúncios (aproximadamente R$ 3.000 por mês).
+
+      Esse valor é destinado exclusivamente às plataformas de anúncios e não inclui os honorários da Qarvon.
+
+      Esse investimento faz sentido para a sua empresa?`,
       options: [
-        { label: "Estou disposto a investir pelo menos R$ 100 por dia", value: "accepted" },
+        { label: "Sim! Estou pronto para levar o meu negócio para o próximo nível", value: "accepted" },
         {
-          label: "Não estou disposto a fazer esse investimento",
+          label: "Infelizmente não é o meu momento",
           value: "rejected",
           disqualifies: true,
           disqualificationReason: "minimum_media_investment_rejected",
