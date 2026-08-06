@@ -7,6 +7,17 @@ import { buildScheduleUrl } from "@/lib/scheduling/calcomUrl";
 
 export type ScheduleRedirectStatus = "idle" | "redirecting" | "error";
 
+/**
+ * Fallback usado somente se NEXT_PUBLIC_CALCOM_URL não chegar ao bundle
+ * (ex.: build-arg não propagado pelo painel de deploy). É um link fixo do
+ * nicho "trafego" — se um segundo nicho for registrado com um Cal.com
+ * diferente, este fallback precisa deixar de ser global (ex.: mover para a
+ * config do formulário) para não redirecionar o lead para a agenda errada.
+ */
+const DEFAULT_CALCOM_URL = "https://qarvon-calcom.uxxkgy.easypanel.host/qarvon/30min";
+
+const configuredCalcomUrl = process.env.NEXT_PUBLIC_CALCOM_URL?.trim() || DEFAULT_CALCOM_URL;
+
 interface UseScheduleRedirectParams {
   form: FormConfig;
   sessionId: string;
@@ -38,11 +49,10 @@ export function useScheduleRedirect({
   const hasClickedRef = useRef(false);
 
   const scheduleUrl = useMemo(() => {
-    const baseUrl = process.env.NEXT_PUBLIC_CALCOM_URL;
-    if (!baseUrl || !sessionId) return null;
+    if (!sessionId) return null;
 
     return buildScheduleUrl({
-      baseUrl,
+      baseUrl: configuredCalcomUrl,
       formId: form.id,
       formSlug: form.slug,
       formVersion: form.version,
