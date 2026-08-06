@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import ReactMarkdown from "react-markdown";
+
 
 interface StepShellProps {
   onBack: () => void;
@@ -22,12 +24,11 @@ export function StepShell({ onBack, question, helperText, children }: StepShellP
         {helperText && (
           <p className="text-sm leading-relaxed text-neutral-600">{helperText}</p>
         )}
-        <h2
-          className="text-xl font-bold leading-snug text-neutral-900 sm:text-2xl"
-          style={{ whiteSpace: "pre-line" }}
-        >
-          {question}
-        </h2>
+        <ReactMarkdown
+  className="text-xl leading-snug font-bold text-neutral-900 sm:text-2xl"
+>
+  {question}
+</ReactMarkdown>
         {children}
       </div>
     </div>
