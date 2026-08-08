@@ -2,7 +2,7 @@ import type { FormConfig } from "./types";
 
 export const trafegoForm: FormConfig = {
   id: "trafego-generico",
-  slug: "trafego",
+  slug: "sofa",
   niche: "Genérico",
   version: "1.0.0",
   theme: {
