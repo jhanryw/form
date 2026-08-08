@@ -6,19 +6,19 @@ export const trafegoForm: FormConfig = {
   niche: "Genérico",
   version: "1.0.0",
   theme: {
-    primaryColor: "#0059de",
-    primaryColorHover: "#0059de",
+    primaryColor: "#A67C52",
+    primaryColorHover: "#8F6843",
     onPrimaryColor: "#ffffff",
   },
   cover: {
-    headline: "🚀 Quer vender mais usando anúncios?",
+    headline: "🛋️ Quer vender mais sofás usando Tráfego Pago?",
     subtitle:
-      "Responda algumas perguntas rápidas para entendermos o seu cenário e mostrarmos como podemos ajudar. 📋",
+      "",
     bullets: [
-      "📈 Mais oportunidades de venda",
-      "🎯 Anúncios para o público certo",
-      "📲 Mais contatos no WhatsApp",
-      "🏆 Estratégia focada em resultado",
+      "✅ Leads com Potencial Real de Investimento",
+      "🎯 Alcance pessoas procurando móveis na sua região",
+      "📲 Gere mais contatos no WhatsApp",
+      "🏆 Método Validado",
     ],
     qualificationFooter:
       "→ Para empresas que já faturam e estão prontas para investir em crescimento.",
