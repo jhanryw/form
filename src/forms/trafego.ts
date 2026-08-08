@@ -6,8 +6,8 @@ export const trafegoForm: FormConfig = {
   niche: "Genérico",
   version: "1.0.0",
   theme: {
-    primaryColor: "#111827",
-    primaryColorHover: "#1f2937",
+    primaryColor: "#0059de",
+    primaryColorHover: "#0059de",
     onPrimaryColor: "#ffffff",
   },
   cover: {
@@ -61,9 +61,7 @@ export const trafegoForm: FormConfig = {
     {
       id: "accepted_media_investment",
       type: "choice",
-      question: `Para gerar volume suficiente de oportunidades, recomendamos um investimento mínimo de R$ 100 por dia em anúncios (aproximadamente R$ 3.000 por mês).
-
-      Esse valor é destinado exclusivamente às plataformas de anúncios e não inclui os honorários da Qarvon.\n\n
+      question: `Para gerar volume suficiente de oportunidades, recomendamos um **investimento mínimo de R$ 100 por dia em anúncios** (aproximadamente R$ 3.000 por mês). Esse valor é destinado exclusivamente às plataformas de anúncios e não inclui os honorários da Qarvon.\n
 
       Esse investimento faz sentido para a sua empresa?`,
       options: [
