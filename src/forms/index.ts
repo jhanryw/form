@@ -1,5 +1,5 @@
 import type { FormConfig } from "./types";
-import { trafegoForm } from "./trafego";
+import { trafegoForm } from "./sofa";
 
 const forms: Record<string, FormConfig> = {
   [trafegoForm.slug]: trafegoForm,
