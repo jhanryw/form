@@ -27,7 +27,7 @@ export function QualifiedScreen({ screen, status, onScheduleClick }: QualifiedSc
         aria-busy={isRedirecting}
         className="w-full rounded-full bg-[var(--form-primary)] px-8 py-4 text-base font-bold tracking-wide text-[var(--form-on-primary)] transition-colors hover:bg-[var(--form-primary-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--form-primary)] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto sm:self-start"
       >
-        {isRedirecting ? "Abrindo agenda..." : screen.buttonText}
+        {isRedirecting ? "Redirecionando..." : screen.buttonText}
       </button>
       {status === "error" && (
         <p role="alert" className="text-sm text-red-600">
