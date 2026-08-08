@@ -31,20 +31,20 @@ export function StepShell({
           </p>
         )}
 
-        <div className="text-xl leading-snug text-neutral-900 sm:text-2xl">
-          <ReactMarkdown
-            components={{
-              p: ({ children }) => (
-                <p className="mb-6 last:mb-0">{children}</p>
-              ),
-              strong: ({ children }) => (
-                <strong className="font-bold">{children}</strong>
-              ),
-            }}
-          >
-            {question}
-          </ReactMarkdown>
-        </div>
+      <div className="text-xl leading-snug text-neutral-900 sm:text-2xl">
+        <ReactMarkdown
+          components={{
+            p: ({ children }) => (
+              <p className="mb-8 last:mb-0">{children}</p>
+            ),
+            strong: ({ children }) => (
+              <strong className="font-bold">{children}</strong>
+            ),
+          }}
+        >
+          {question}
+        </ReactMarkdown>
+      </div>
 
         {children}
       </div>
