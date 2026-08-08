@@ -61,11 +61,14 @@ export const trafegoForm: FormConfig = {
     {
       id: "accepted_media_investment",
       type: "choice",
-      question: `Para gerar volume suficiente de oportunidades, recomendamos um **investimento mínimo de R$ 100 por dia em anúncios** (aproximadamente R$ 3.000 por mês). Esse valor é destinado exclusivamente às plataformas de anúncios e não inclui os honorários da Qarvon.\n
+      question: `Para gerar volume suficiente de oportunidades, recomendamos um **investimento mínimo de R$ 100 por dia em anúncios** (aproximadamente R$ 3.000 por mês). Esse valor é destinado exclusivamente às plataformas de anúncios e não inclui os honorários da Qarvon.
 
-      Esse investimento faz sentido para a sua empresa?`,
+    Esse investimento faz sentido para a sua empresa?`,
       options: [
-        { label: "Sim! Estou pronto para levar o meu negócio para o próximo nível", value: "accepted" },
+        {
+          label: "Sim! Estou pronto para levar o meu negócio para o próximo nível",
+          value: "accepted",
+        },
         {
           label: "Infelizmente não é o meu momento",
           value: "rejected",
@@ -93,7 +96,7 @@ export const trafegoForm: FormConfig = {
   },
   qualifiedScreen: {
     title: "Seu formulário está 98% preenchido",
-    body: "Agora falta apenas escolher o melhor horário para conversarmos.",
-    buttonText: "ESCOLHER MEU HORÁRIO",
+    body: "Falta apenas uma etapa para finalizar o formulário.",
+    buttonText: "AVANÇAR",
   },
 };

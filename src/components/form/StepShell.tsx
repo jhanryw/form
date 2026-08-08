@@ -31,14 +31,14 @@ export function StepShell({
           </p>
         )}
 
-        <div className="text-xl font-bold leading-snug text-neutral-900 sm:text-2xl">
+        <div className="text-xl leading-snug text-neutral-900 sm:text-2xl">
           <ReactMarkdown
             components={{
               p: ({ children }) => (
-                <p className="mb-5 last:mb-0">{children}</p>
+                <p className="mb-6 last:mb-0">{children}</p>
               ),
               strong: ({ children }) => (
-                <strong className="font-extrabold">{children}</strong>
+                <strong className="font-bold">{children}</strong>
               ),
             }}
           >
