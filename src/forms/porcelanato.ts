@@ -6,8 +6,8 @@ export const trafegoPorcelanatoForm: FormConfig = {
   niche: "porcelanato",
   version: "1.0.0",
   theme: {
-    primaryColor: "#A67C52",
-    primaryColorHover: "#8F6843",
+    primaryColor: "#8B6747",
+    primaryColorHover: "#75563B",
     onPrimaryColor: "#ffffff",
   },
   cover: {
