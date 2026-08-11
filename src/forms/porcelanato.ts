@@ -11,7 +11,7 @@ export const trafegoPorcelanatoForm: FormConfig = {
     onPrimaryColor: "#ffffff",
   },
   cover: {
-    headline: "🏠 Transforme reformas em pedidos de porcelanato com Tráfego Pago.",
+    headline: "💰 Transforme reformas em pedidos de porcelanato com Tráfego Pago.",
     subtitle:
       "",
     bullets: [
