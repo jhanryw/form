@@ -1,11 +1,13 @@
 import type { FormConfig } from "./types";
+
 import { trafegoForm } from "./sofa";
 import { trafegoPorcelanatoForm } from "./porcelanato";
+import { trafegoGeralForm } from "./geral";
 
 const forms: Record<string, FormConfig> = {
   [trafegoForm.slug]: trafegoForm,
   [trafegoPorcelanatoForm.slug]: trafegoPorcelanatoForm,
-  [trafegoPorcelanato.slug]: trafegoGeralForm,
+  [trafegoGeralForm.slug]: trafegoGeralForm,
 };
 
 export function getFormBySlug(slug: string): FormConfig | undefined {
