@@ -7,15 +7,20 @@ interface CoverScreenProps {
 
 export function CoverScreen({ cover, onStart }: CoverScreenProps) {
   return (
-    <div className="mx-auto flex min-h-screen w-full max-w-xl flex-col justify-center gap-8 px-6 py-16 sm:px-10">
-      <div className="flex flex-col gap-4">
+    <div className="mx-auto flex min-h-screen w-full max-w-xl flex-col justify-center gap-5 px-6 py-10 sm:px-10">
+      <div className="flex flex-col gap-2">
         <h1 className="text-2xl leading-snug font-extrabold text-neutral-900 sm:text-3xl">
           {cover.headline}
         </h1>
-        <p className="text-base text-neutral-600 sm:text-lg">{cover.subtitle}</p>
+
+        {cover.subtitle && (
+          <p className="text-base text-neutral-600 sm:text-lg">
+            {cover.subtitle}
+          </p>
+        )}
       </div>
 
-      <ul className="flex flex-col gap-3">
+      <ul className="flex flex-col gap-2">
         {cover.bullets.map((bullet) => (
           <li key={bullet} className="text-base text-neutral-800 sm:text-lg">
             {bullet}
@@ -23,7 +28,11 @@ export function CoverScreen({ cover, onStart }: CoverScreenProps) {
         ))}
       </ul>
 
-      <p className="text-sm text-neutral-500 italic">{cover.qualificationFooter}</p>
+      {cover.subtitle && (
+  <p className="text-base text-neutral-600 sm:text-lg">
+    {cover.subtitle}
+  </p>
+)}
 
       <button
         type="button"
