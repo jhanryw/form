@@ -5,6 +5,7 @@ import { trafegoPorcelanatoForm } from "./porcelanato";
 const forms: Record<string, FormConfig> = {
   [trafegoForm.slug]: trafegoForm,
   [trafegoPorcelanatoForm.slug]: trafegoPorcelanatoForm,
+  [trafegoPorcelanato.slug]: trafegoGeralForm,
 };
 
 export function getFormBySlug(slug: string): FormConfig | undefined {
